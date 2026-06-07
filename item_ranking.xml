@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="@color/negro_carta"
+    app:cardElevation="2dp"
+    app:strokeColor="#2A2A2A"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textoPosicion"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/oro" />
+
+        <ImageView
+            android:id="@+id/imagenFoto"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textoNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:textSize="16sp"
+            android:textColor="@color/blanco" />
+
+        <ImageView
+            android:id="@+id/imagenCampeon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/textoPuntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/oro" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

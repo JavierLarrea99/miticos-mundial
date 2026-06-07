@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/negro">
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_margin="8dp" android:layout_gravity="start"
+        android:background="@android:color/transparent"
+        android:textColor="@color/oro" android:textAllCaps="false" android:text="⬅ Volver" />
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Resultados" android:textColor="@color/blanco"
+        android:textSize="24sp" android:textStyle="bold"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="8dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerResultados"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:clipToPadding="false" android:paddingBottom="6dp" />
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:indeterminateTint="@color/oro"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

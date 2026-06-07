@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/negro">
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/oro" android:textAllCaps="false" android:text="⬅ Volver" />
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center_horizontal" android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imagenPerfil"
+            android:layout_width="120dp" android:layout_height="120dp"
+            android:layout_marginTop="16dp" android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:indeterminateTint="@color/oro"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textoNombre"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:textSize="26sp" android:textStyle="bold"
+            android:textColor="@color/blanco" />
+
+        <TextView
+            android:id="@+id/textoCampeon"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:textSize="18sp" android:textColor="@color/oro_claro" />
+
+        <TextView
+            android:id="@+id/textoPuntos"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:textSize="18sp" android:textColor="@color/blanco" />
+
+        <Button
+            android:id="@+id/botonCambiarNombre"
+            style="@style/BotonOroBorde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="✏ Cambiar nombre" />
+
+        <Button
+            android:id="@+id/botonCambiarFoto"
+            style="@style/BotonOroBorde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="🖼 Cambiar foto" />
+
+        <Button
+            android:id="@+id/botonLogout"
+            style="@style/BotonOroBorde"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" android:text="Cerrar sesión" />
+
+
+    </LinearLayout>
+</LinearLayout>

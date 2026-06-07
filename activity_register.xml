@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textColor="@color/oro"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="28dp" />
+
+        <EditText
+            android:id="@+id/campoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/gris_texto" />
+
+        <EditText
+            android:id="@+id/campoEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/gris_texto" />
+
+        <EditText
+            android:id="@+id/campoPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/gris_texto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto de perfil"
+            android:textColor="@color/blanco"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imagenPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/negro_carta"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/botonFoto"
+            style="@style/BotonOroBorde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elegir foto"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Quién ganará el Mundial? [+20 si aciertas]"
+            android:textColor="@color/oro_claro"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerCampeon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/oro" />
+
+        <Button
+            android:id="@+id/botonCrear"
+            style="@style/BotonOro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:layout_marginTop="28dp" />
+    </LinearLayout>
+</ScrollView>

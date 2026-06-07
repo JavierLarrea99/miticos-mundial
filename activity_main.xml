@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/negro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/logo_login" />
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="MÍTICOS MUNDIAL"
+            android:textColor="@color/oro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+        <Button
+            android:id="@+id/botonActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:icon="@drawable/ic_actualizar"
+            app:iconTint="@color/oro"
+            app:iconSize="24dp"
+            app:iconPadding="0dp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#2A2A2A" />
+
+    <Button
+        android:id="@+id/botonAdmin"
+        style="@style/BotonOro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="10dp"
+        android:text="⚙ Meter resultados [Admin]"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPartidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:clipToPadding="false" />
+
+        <TextView
+            android:id="@+id/textoVacio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No hay partidos hoy 🌙"
+            android:textColor="@color/gris_texto"
+            android:textSize="17sp" />
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/oro"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#2A2A2A" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/negro_carta"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <Button
+            android:id="@+id/botonRanking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text=""
+            app:icon="@drawable/ic_ranking"
+            app:iconTint="@color/oro"
+            app:iconSize="26dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/botonResultados"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text=""
+            app:icon="@drawable/ic_resultados"
+            app:iconTint="@color/oro"
+            app:iconSize="26dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <Button
+            android:id="@+id/botonPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text=""
+            app:icon="@drawable/ic_perfil"
+            app:iconTint="@color/oro"
+            app:iconSize="26dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+    </LinearLayout>
+</LinearLayout>

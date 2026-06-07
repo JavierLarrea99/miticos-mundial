@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/negro">
+
+    <!-- Mini logo arriba a la izquierda -->
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_login" />
+
+    <!-- Todo lo demás centrado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MÍTICOS MUNDIAL"
+            android:textColor="@color/oro"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="36dp" />
+
+        <EditText
+            android:id="@+id/campoEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/gris_texto" />
+
+        <EditText
+            android:id="@+id/campoPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/blanco"
+            android:textColorHint="@color/gris_texto" />
+
+        <Button
+            android:id="@+id/botonEntrar"
+            style="@style/BotonOro"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="28dp"
+            android:text="Entrar" />
+
+        <TextView
+            android:id="@+id/textoRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textColor="@color/gris_texto"
+            android:layout_marginTop="20dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

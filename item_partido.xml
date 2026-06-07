@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/negro_carta"
+    app:cardElevation="4dp"
+    app:strokeColor="#2A2A2A"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/textoFase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/oro"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:id="@+id/escudoLocal"
+                    android:layout_width="50dp" android:layout_height="50dp" android:scaleType="fitCenter" />
+                <TextView android:id="@+id/nombreLocal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:textSize="16sp" android:textColor="@color/blanco"
+                    android:textStyle="bold" android:gravity="center" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="VS" android:textColor="@color/gris_texto" android:textSize="13sp"
+                android:textStyle="bold" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:id="@+id/escudoVisitante"
+                    android:layout_width="50dp" android:layout_height="50dp" android:scaleType="fitCenter" />
+                <TextView android:id="@+id/nombreVisitante"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:textSize="16sp" android:textColor="@color/blanco"
+                    android:textStyle="bold" android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoFecha"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:gravity="center"
+            android:textColor="@color/gris_texto" android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/zonaPrediccion"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginTop="14dp">
+            <EditText
+                android:id="@+id/golesLocal"
+                android:layout_width="52dp" android:layout_height="wrap_content"
+                android:inputType="number" android:gravity="center" android:hint="0"
+                android:textColor="@color/blanco" android:textColorHint="@color/gris_texto" />
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="-" android:textColor="@color/blanco" android:textSize="20sp"
+                android:layout_marginStart="10dp" android:layout_marginEnd="10dp" />
+            <EditText
+                android:id="@+id/golesVisitante"
+                android:layout_width="52dp" android:layout_height="wrap_content"
+                android:inputType="number" android:gravity="center" android:hint="0"
+                android:textColor="@color/blanco" android:textColorHint="@color/gris_texto" />
+            <Button
+                android:id="@+id/botonGuardar"
+                style="@style/BotonOro"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" android:text="Guardar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoEstado"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:gravity="center" android:lineSpacingExtra="4dp"
+            android:textColor="@color/blanco" android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/botonPronosticos"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginTop="6dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/oro"
+            android:textAllCaps="false"
+            android:text="Ver pronósticos" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
