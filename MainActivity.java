@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            java.util.Date inicioHoy = new java.util.Date(); // desde ahora
+            // Ventana: desde hace 4 horas (para que un partido EN JUEGO siga saliendo) hasta +36h
+            java.util.Date inicioHoy = new java.util.Date(System.currentTimeMillis() - 4L * 60 * 60 * 1000); // hace 4 horas
             java.util.Date inicioManana = new java.util.Date(System.currentTimeMillis() + 36L * 60 * 60 * 1000); // +36 horas
 
             ParseQuery<ParseObject> qPart = ParseQuery.getQuery("Partido");

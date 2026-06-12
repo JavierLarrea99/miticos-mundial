@@ -51,6 +51,27 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.VH> {
         } else {
             holder.campeon.setVisibility(View.GONE);
         }
+
+        // ---- Colores del podio + último ----
+        int total = getItemCount();
+        int colorBorde;
+        int colorPos; // color del número de posición
+        if (position == 0) {
+            colorBorde = 0xFFE0A82E; colorPos = 0xFFE0A82E;   // oro
+        } else if (position == 1) {
+            colorBorde = 0xFFB0B0B0; colorPos = 0xFFB0B0B0;   // plata
+        } else if (position == 2) {
+            colorBorde = 0xFFB87333; colorPos = 0xFFB87333;   // bronce
+        } else if (position == total - 1 && total > 3) {
+            colorBorde = 0xFFE05A5A; colorPos = 0xFFE05A5A;   // último: rojo
+        } else {
+            colorBorde = 0xFF2A2A2A; colorPos = 0xFFE0A82E;   // resto: como estaban
+        }
+        com.google.android.material.card.MaterialCardView card =
+                (com.google.android.material.card.MaterialCardView) holder.itemView;
+        card.setStrokeColor(colorBorde);
+        card.setStrokeWidth(Math.round(2 * holder.itemView.getResources().getDisplayMetrics().density));
+        holder.posicion.setTextColor(colorPos);
     }
 
     @Override
